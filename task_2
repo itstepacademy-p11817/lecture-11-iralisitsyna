@@ -1,0 +1,33 @@
+#include<iostream>//lecture 11
+
+using namespace std;
+
+int main() {
+	
+	setlocale(LC_ALL, "Russian");
+
+	unsigned int x, y;
+	unsigned long long result = 1;
+
+	cout << "Введите первое число!\n";
+	while (!(cin >> x)) {
+		cin.clear();
+		while (cin.get() != '\n');
+		cout << "Введите первое число!\n";
+	}
+
+	cout << "Введите второе число!\n";
+	while (!(cin >> y)) {
+		cin.clear();
+		while (cin.get() != '\n');
+		cout << "Введите второе число!\n";
+	}
+
+	for (int i = 0; i < y; i++) {
+		result *= x;
+	}
+	cout << x << " " << "В степени " << y << "=" <<" "<<result << endl;
+
+	system("pause");
+	return 0;
+}
