@@ -1,0 +1,25 @@
+#include<iostream>//lecture 11
+
+using namespace std;
+//task_1
+int main() {
+
+	setlocale(LC_ALL, "Russian");
+
+	int a;
+	int sum = 0;
+
+	cout << "Введите число от 1 до 500!\n";
+	while (!(cin >> a) && !((a >= 1 && a <= 500))) {
+		cin.clear();
+		while (cin.get() != '\n');
+		cout << "Введите число от 1 до 500!\n";
+	}
+
+	for (int i = a; i <= 500; ++i) {
+		sum = sum + i;
+	}
+	cout << sum;
+	system("pause");
+	return 0;
+}
